@@ -3,8 +3,7 @@ import NavigationTitleReducer from './NavigationTitle'
 import { combineReducers } from 'redux';
 
 const allReducer = combineReducers({
-    isLogged: loggedReducer,
-    navigationTitle: NavigationTitleReducer
+    isLogged: loggedReducer
 });
 
 export default allReducer;
