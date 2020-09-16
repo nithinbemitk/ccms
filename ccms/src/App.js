@@ -1,36 +1,36 @@
 import React from 'react';
-import notificatioIcon from '../src/Images/NotificatioIcon.png'
-import profileIcon from '../src/Images/profile.png'
-import logo from '../src/Images/AppLogo.png'
+import Login from './components/login/Login'
+import Home from './components/dashboard/Home'
+import { useSelector, useDispatch } from 'react-redux'
+import { loggedIn } from './actions'
+
+
+// import logo from '../src/Images/AppLogo.png'
+
 
 import './App.css';
 
 function App() {
+
+  const isLogged = useSelector(state => state.isLogged);
+  const dispatch = useDispatch();
+
+  const ChangeLoginValue = () => {
+    dispatch(loggedIn())
+  }
+
+
   return (
-    <div className='Parent'>
-      <div className='LeftPanel'>
-        <h4>Nav Items</h4>
-        <li>Item 1</li>
-        <li>Item 2</li>
-      </div>
 
-      <div className='RightPanel'>
-        <div className='RightHeader'>
-          <div className='HeaderText'>
-            <h5>Dashboard</h5>
-          </div>
-          <div className='HeaderNotification'>
-            <img src={notificatioIcon} />
-          </div>
-          <div className='HeaderProfile'>
-          <img src={profileIcon} />
-          </div>
+    <div className="App">
+      {/* <button onClick={ChangeLoginValue}>Toggle</button> */}
 
-        </div>
-        <div className='RightContent'>
-          <h1>content</h1>
-        </div>
-      </div>
+      {isLogged ? (
+        <Home />
+      ) : (
+          <Login />
+        )}
+
     </div>
   );
 }
