@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../../images/AppLogo.png'
-import { navTitleValue } from '../../actions'
 
 function SideBar() {
 

@@ -1,6 +1,6 @@
 import loggedReducer from './isLoggedin'
+import NavigationTitleReducer from './NavigationTitle'
 import { combineReducers } from 'redux';
-import { navTitleValue } from '../actions';
 
 const allReducer = combineReducers({
     isLogged: loggedReducer,

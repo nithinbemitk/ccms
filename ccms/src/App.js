@@ -19,17 +19,11 @@ function App() {
     dispatch(loggedIn())
   }
 
-
   return (
-
     <div className="App">
       {/* <button onClick={ChangeLoginValue}>Toggle</button> */}
 
-      {isLogged ? (
-        <Home />
-      ) : (
-          <Login />
-        )}
+      {isLogged ? <Home /> : <Login />}
 
     </div>
   );
