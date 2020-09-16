@@ -1,9 +1,10 @@
 import loggedReducer from './isLoggedin'
-import NavigationTitleReducer from './NavigationTitle'
+import navigationReducer from './navigation'
 import { combineReducers } from 'redux';
 
 const allReducer = combineReducers({
-    isLogged: loggedReducer
+    isLogged: loggedReducer,
+    navigation: navigationReducer
 });
 
 export default allReducer;
