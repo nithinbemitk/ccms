@@ -15,7 +15,7 @@ function Home() {
     }
 
     return (
-        <div>
+        <div className="MainDashboard">
                 <SideBar />
                 <Navigation />
             {/* <button onClick={LogoutClicekd}>Logout</button> */}

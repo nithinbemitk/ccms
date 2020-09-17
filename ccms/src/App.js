@@ -3,11 +3,6 @@ import Login from './components/login/Login'
 import Home from './components/dashboard/Home'
 import { useSelector, useDispatch } from 'react-redux'
 import { loggedIn } from './actions'
-
-
-// import logo from '../src/Images/AppLogo.png'
-
-
 import './App.css';
 
 function App() {

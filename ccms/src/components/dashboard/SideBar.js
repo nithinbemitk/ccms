@@ -3,6 +3,7 @@ import logo from '../../images/AppLogo.png'
 import { useDispatch } from 'react-redux'
 import { setNavigation } from '../../actions'
 import { ACTION_TYPE_DASHBOARD, ACTION_TYPE_COACHING } from '../../actions'
+import profileIcon from '../../images/profile.png'
 
 function SideBar() {
 
@@ -19,12 +20,10 @@ function SideBar() {
     }
 
     return (
-        <div className='Parent'>
-            <div className='LeftPanel'>
-                <img src={logo} />
-                <li onClick={onDashboardClicked}>DASHBOARD</li>
-                <li onClick={onCoachingClicked}>COACHING</li>
-            </div>
+        <div className='LeftPanel'>
+            <img src={logo} />
+    <li className="ListSpace" onClick={onDashboardClicked}><img src={profileIcon}></img>{' '}DASHBOARD</li>
+            <li className="ListSpace" onClick={onCoachingClicked}><img src={profileIcon}></img>{' '}COACHING</li>
         </div>
     );
 }
