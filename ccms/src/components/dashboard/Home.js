@@ -15,13 +15,9 @@ function Home() {
     }
 
     return (
-        <div className={Parent}>
-            <div className={LeftPanel}>
+        <div>
                 <SideBar />
-            </div>
-            <div className={RightPanel}>
                 <Navigation />
-            </div>
             {/* <button onClick={LogoutClicekd}>Logout</button> */}
         </div>
     );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../../images/LoginBackground.png'
+import loginBackgroundIcon from '../../images/LoginBackground.png'
 import icon from '../../images/MicrosoftIcon.png'
 import { useDispatch } from 'react-redux'
 import { loggedIn } from '../../actions'
@@ -34,13 +34,13 @@ function Login() {
 
 
     return (
-        <div className="loginCss">
-            <div className="loginLeftCss">
+        <div className="LoginPanel">
+            <div className="LoginLeftPanel">
                 <h3>{signIn}</h3>
                 <button ><img src={icon} onClick={LoginClicked}></img></button>
             </div>
-            <div className="loginRightCss">
-                <img src={logo}></img>
+            <div className="LoginRightPanel">
+                <img className="LoginBG" src={loginBackgroundIcon}></img>
             </div>
         </div>
     );

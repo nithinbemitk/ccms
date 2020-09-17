@@ -37,10 +37,31 @@
   }
 }
 
+.LoginPanel {
+  display: flex;
+}
+
+.LoginLeftPanel {
+  height: 100vh;
+  width: 30vw;
+  padding-top: 15%;
+}
+
+.LoginRightPanel {
+  height: 100vh;
+  width: 70vw;
+
+}
+
+.LoginBG {
+  height: 100%;
+  width: 100%;
+}
 
 
 .Parent {
   display: flex;
+  flex-direction: column;
 }
 
 .LeftPanel {
