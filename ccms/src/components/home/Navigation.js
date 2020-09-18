@@ -1,9 +1,8 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import notificatioIcon from '../../images/NotificatioIcon.png'
 import profileIcon from '../../images/profile.png'
-import { useSelector } from 'react-redux'
-import Dashboard from '../dashboard/Dashboard'
-import Coaching from '../coaching/Coaching'
+import Router from '../../Router'
 
 function Navigation() {
 
@@ -29,9 +28,7 @@ function Navigation() {
             </div>
 
             <div className='RightContent'>
-                {
-                    navigationType === "Dashboard" ? <Dashboard /> : <Coaching />
-                }
+                <Router path={navigationType}/>
             </div>
         </div>
     );
