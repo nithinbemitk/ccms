@@ -1,15 +1,28 @@
-// https://www.youtube.com/watch?v=Fb-bDigImpw
+// https://github.com/rt2zz/redux-persist
 
 import { createStore } from 'redux'
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
+
+// root reducer
 import allReducer from '../reducers'
-import { persistStore } from 'redux-persist';
 
+const config = {
+    key: 'ccms',
+    storage: storage,
+}
 
+// create persist reducer
+const persistedReducer = persistReducer(config, allReducer)
+
+// create store uring persist reducer
+/* eslint-disable */
 const store = createStore(
-    allReducer,
+    persistedReducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
+// persist the store
 const persistor = persistStore(store);
 
 export { store, persistor };
