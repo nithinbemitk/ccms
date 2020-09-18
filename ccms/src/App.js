@@ -2,7 +2,7 @@ import React from 'react';
 import Login from './components/login/Login'
 import Home from './components/home/Home'
 import { useSelector, useDispatch } from 'react-redux'
-import { loggedIn } from './actions'
+import { loggedIn } from './redux/actions'
 import './App.css';
 
 function App() {

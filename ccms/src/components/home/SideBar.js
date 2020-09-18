@@ -1,8 +1,7 @@
 import React from 'react';
 import logo from '../../images/AppLogo.png'
 import { useDispatch } from 'react-redux'
-import { setNavigation } from '../../actions'
-import { ACTION_TYPE_DASHBOARD, ACTION_TYPE_COACHING } from '../../actions'
+import { setNavigation, ACTION_TYPE_DASHBOARD, ACTION_TYPE_COACHING } from '../../redux/actions'
 import profileIcon from '../../images/profile.png'
 
 function SideBar() {

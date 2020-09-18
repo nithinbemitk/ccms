@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import loginBackgroundIcon from '../../images/LoginBackground.png'
 import icon from '../../images/MicrosoftIcon.png'
 import { useDispatch } from 'react-redux'
-import { loggedIn } from '../../actions'
+import { loggedIn } from '../../redux/actions'
 
 
 function Login() {
