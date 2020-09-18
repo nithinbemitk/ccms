@@ -1,6 +1,6 @@
 import React from 'react';
 import Login from './components/login/Login'
-import Home from './components/dashboard/Home'
+import Home from './components/home/Home'
 import { useSelector, useDispatch } from 'react-redux'
 import { loggedIn } from './actions'
 import './App.css';
