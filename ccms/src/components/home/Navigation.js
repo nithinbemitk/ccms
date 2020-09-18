@@ -1,8 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import notificatioIcon from '../../images/NotificatioIcon.png'
-import profileIcon from '../../images/profile.png'
 import Router from '../../Router'
+import Header from './Header'
 
 function Navigation() {
 
@@ -11,25 +10,10 @@ function Navigation() {
         return state.navigation.title
     })
 
-
     return (
-
         <div className='RightPanel'>
-            <div className='RightHeader'>
-                <div className='HeaderText'>
-                    <h5>{navigationType}</h5>
-                </div>
-                <div className='HeaderNotification'>
-                    <img src={notificatioIcon} />
-                </div>
-                <div className='HeaderProfile'>
-                    <img src={profileIcon} />
-                </div>
-            </div>
-
-            <div className='RightContent'>
-                <Router path={navigationType}/>
-            </div>
+            <Header />
+            <Router className='RightContent' path={navigationType} />
         </div>
     );
 }
