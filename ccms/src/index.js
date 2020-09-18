@@ -3,19 +3,30 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { createStore } from 'redux'
-import allReducer from './reducers'
 import { Provider } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react';
 
-const store = createStore(
-  allReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  );
+// import { createStore } from 'redux'
+// import allReducer from './reducers'
+// import { persistStore } from 'redux-persist';
+
+
+// const store = createStore(
+//     allReducer,
+//     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+// );
+
+// const persistor = persistStore(store);
+
+import { store, persistor } from './redux/Store'
+
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <PersistGate persistor={persistor}>
+        <App />
+      </PersistGate>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
