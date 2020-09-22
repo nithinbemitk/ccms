@@ -10,7 +10,7 @@ const axiosClient = axios.create({
  * this is the common method which all modules 
  * should call where api is needed
  */
-const makeApiRequest = (options) => {
+const makeApiRequest = async (options) => {
   return new Promise((resolve, reject) => {
     axiosClient(options)
       .then((response) => {

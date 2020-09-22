@@ -5,7 +5,7 @@ import makeApiRequest from './request';
 /**
  * this uses a promise, which makes a request, which internally uses axios 
  */
-export const getUsers = () => {
+export const getUsers = async () => {
     return new Promise((resolve, reject) => {
         const params = {}
         const header = null
@@ -24,7 +24,7 @@ export const getUsers = () => {
 /**
  * this returns a promise which uses axios directly
  */
-export const getPosts = () => {
+export const getPosts = async () => {
     return new Promise((resolve, reject) => {
         axios.get(`${BASE_URL + endPoints.posts}`)
             .then(function (response) {
