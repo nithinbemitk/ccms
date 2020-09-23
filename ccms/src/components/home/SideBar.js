@@ -20,9 +20,9 @@ function SideBar() {
 
     return (
         <div className='LeftPanel'>
-            <img src={logo} />
+            <img src={logo} width='50%' />
             <li className="ListSpace" onClick={onDashboardClicked}><img src={profileIcon}></img>{' '}DASHBOARD</li>
-            <li className="ListSpace" onClick={onCoachingClicked}><img src={profileIcon}></img>{' '}COACHING</li>
+            <li className="ListSpace" onClick={onCoachingClicked}><img src={profileIcon}></img>{' '}COACHING   </li>
         </div>
     );
 }
