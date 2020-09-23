@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import notificatioIcon from '../../images/NotificatioIcon.png';
 import profileIcon from '../../images/profile.png';
 
@@ -10,6 +10,15 @@ const Header = (props) => {
         return state.navigation.title
     })
 
+    const dispatch = useDispatch();
+
+    const LogoutClicked = () => {
+        console.log("Login Clicked");        
+        dispatch({
+            type: "SIGN_IN",
+            payload: 1
+        })
+    }
     return (
         <div className='RightHeader'>
             <div className='HeaderText'>
@@ -19,7 +28,7 @@ const Header = (props) => {
                 <img src={notificatioIcon} />
             </div>
             <div className='HeaderProfile'>
-                <img src={profileIcon} />
+                <img onClick={LogoutClicked} src={profileIcon} />
             </div>
         </div>
     );
