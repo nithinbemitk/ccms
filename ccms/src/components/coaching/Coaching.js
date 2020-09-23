@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getPosts } from '../../service'
 import { Post } from './Post'
 import { CoachingRow } from './Coaching.css'
+import PlanStageOne from './newPlan/PlanStageOne';
 
 function Coaching() {
 
@@ -28,6 +29,7 @@ function Coaching() {
 
         <div >
             <h3>Coaching</h3>
+            <PlanStageOne />
             <div className="CoachingRow">
                 {userPosts}
             </div>
