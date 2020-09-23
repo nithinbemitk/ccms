@@ -5,7 +5,6 @@ import StatusList from './StatusList'
 import { useSelector } from 'react-redux'
 
 function Dashboard() {
-    const [role, SetRole] = useState(1)
 
     const roleType = useSelector(state => {
         console.log("*** Role state is ", state.signIn.role)
@@ -13,7 +12,7 @@ function Dashboard() {
     })
 
     const displayByRole = () => {
-        switch (role) {
+        switch (roleType) {
             case 1 :
                 return <div><Calendar /> <QualityPlan /><StatusList /></div> 
             case 2 :
