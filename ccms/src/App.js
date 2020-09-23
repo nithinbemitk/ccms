@@ -6,7 +6,10 @@ import './App.css';
 
 function App() {
 
-  const isLogged = useSelector(state => state.isLogged);
+  const isLogged = useSelector(state => {
+    console.log("*** Login state is ", state.signIn.isLogged)
+    return state.signIn.isLogged
+})
 
   return (
     <div className="App">
