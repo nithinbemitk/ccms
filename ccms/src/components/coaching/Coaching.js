@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { getPosts } from '../../service'
-import { Post } from './Post'
-import { CoachingRow } from './Coaching.css'
-import PlanStageOne from './newPlan/PlanStageOne';
+import { getPosts } from '../../service';
+import './Coaching.css';
+import CoachingHeader from './CoachingHeader';
+import NewPlan from './newPlan/NewPlan';
+import { Post } from './Post';
 
 function Coaching() {
 
     const [posts, setPosts] = useState({ posts: [] })
+    const [newPlan, setNewPlan] = useState(false)
 
     useEffect(() => {
         getPosts()
@@ -24,15 +26,23 @@ function Coaching() {
         return <Post item={item} />
     })
 
+    const displayContent = () => {
+        if (newPlan) {
+            return <NewPlan />
+        } else {
+            return (<div className="CoachingRow">
+                {userPosts}
+            </div>)
+        }
+    }
 
     return (
 
         <div >
-            <h3>Coaching</h3>
-            <PlanStageOne />
-            <div className="CoachingRow">
-                {userPosts}
-            </div>
+            <CoachingHeader />
+            {
+                displayContent()
+            }
         </div>
     );
 }
