@@ -1,8 +1,9 @@
 import React from 'react'
+import PlanStageOne from './PlanStageOne';
 
 const NewPlan = () => {
     return (
-        <h1> New Plan </h1>
+        <PlanStageOne />
     );
 }
 

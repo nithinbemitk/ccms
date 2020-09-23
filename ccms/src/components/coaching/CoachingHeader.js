@@ -1,11 +1,24 @@
-import React from 'react'
-import CoachingRow from './Coaching.css'
+import React from 'react';
+import './Coaching.css'
 
-const CoachingHeader = () => {
+const CoachingHeader = (props) => {
+
+    const showPlans = () => {
+        props.displayPlan(true);
+    }
+
+    const showHideNewPlan = () => {
+        if (!props.newPlan) {
+            return <button className='RightSide' onClick={showPlans}>New Plan</button>
+        } else {
+            return null
+        }
+    }
     return (
         <div className="CoachingRow">
-            <h1> Coaching Header </h1>
-            <button>New Plan</button>
+            <h1 className="LeftSide"> Coaching Header </h1>
+
+            {showHideNewPlan()}
         </div>
     );
 }

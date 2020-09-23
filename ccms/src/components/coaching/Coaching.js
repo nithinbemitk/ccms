@@ -39,7 +39,7 @@ function Coaching() {
     return (
 
         <div >
-            <CoachingHeader />
+            <CoachingHeader displayPlan={setNewPlan} newPlan={newPlan}/>
             {
                 displayContent()
             }
