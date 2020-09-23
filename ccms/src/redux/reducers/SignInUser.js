@@ -10,7 +10,6 @@ const SignInUserReducer = (state = initialState, action) => {
     switch (action.type) {
         case ACTION_TYPE_LOGIN: {
             return {
-                ...state,
                 isLogged: !state.isLogged,
                 role: action.payload
             }

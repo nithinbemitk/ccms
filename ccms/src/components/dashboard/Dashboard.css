@@ -1,0 +1,44 @@
+.DashboardCss {
+    display: flex;
+    height: 60vh;
+    width: 80vw;
+}
+
+.QualityPlanCss {
+    height: 60vh;
+    width: 30vw;
+    background-color: rgba(238, 250, 215, 0.801);
+    list-style: none;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    justify-items: center;
+    margin: 0 0 30px 0;
+}
+
+.StatusListCss {
+    height: 60vh;
+    width: 50vw;
+    background-color: #dffb618c;
+    list-style: none;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    justify-items: center;
+    margin: 0 0 30px 0;
+}
+
+.CalendarCss {
+    background-color: red;
+    height: 30vh;
+    width: 80vw;
+    list-style: none;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    justify-items: center;
+    margin: 0 0 30px 0;
+}
