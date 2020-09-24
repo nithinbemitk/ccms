@@ -1,11 +1,11 @@
-.DashboardCss {
+.Dashboard {
     display: flex;
-    height: 60vh;
+    height: 50vh;
     width: 80vw;
 }
 
-.QualityPlanCss {
-    height: 60vh;
+.Quality {
+    height: 50vh;
     width: 30vw;
     background-color: rgba(238, 250, 215, 0.801);
     list-style: none;
@@ -17,8 +17,8 @@
     margin: 0 0 30px 0;
 }
 
-.StatusListCss {
-    height: 60vh;
+.StatusList {
+    height:50vh;
     width: 50vw;
     background-color: #dffb618c;
     list-style: none;
@@ -30,9 +30,9 @@
     margin: 0 0 30px 0;
 }
 
-.CalendarCss {
+.Calendar {
     background-color: red;
-    height: 30vh;
+    height: 40vh;
     width: 80vw;
     list-style: none;
     padding-top: 10px;

@@ -29,15 +29,15 @@ function Dashboard() {
                 </div>
             case 3:
                 return <div >
-                    <div className="DashboardCss">
-                        <div className="StatusListCss">
+                    <div className="Dashboard">
+                        <div className="StatusList">
                             <StatusList />
                         </div>
-                        <div className="QualityPlanCss">
+                        <div className="QualityPlan">
                             <QualityPlan />
                         </div>
                     </div>
-                    <div className="CalendarCss">
+                    <div className="Calendar">
                         <Calendar />
                     </div>
                 </div>
