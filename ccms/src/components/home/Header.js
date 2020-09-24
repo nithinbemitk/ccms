@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import notificatioIcon from '../../images/NotificatioIcon.png';
 import profileIcon from '../../images/profile.png';
+import {Notifications, Person} from '@material-ui/icons/';
 
 import { Menu, MenuItem } from '@material-ui/core';
 
@@ -37,10 +38,10 @@ const Header = (props) => {
                 <h5>{navigationType}</h5>
             </div>
             <div className='HeaderNotification'>
-                <img src={notificatioIcon} />
+                <Notifications />
             </div>
             <div className='HeaderProfile'>
-                <img onClick={handleClick} src={profileIcon} />
+                <Person onClick={handleClick}></Person>
             </div>
             <Menu
                 id="simple-menu"
