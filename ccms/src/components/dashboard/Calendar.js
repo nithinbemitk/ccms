@@ -8,11 +8,16 @@ import './custom.css'
 import "@fullcalendar/daygrid/main.css";
 
 function Calendar() {
-    const events = [{ title: "Nithin Birthday", date: '2020-09-23' }, { title: "KP Birthday", date: '2020-09-11' }];
+    const events = [{ title: "Nithin Birthday", date: '2020-09-23' }, { title: "KP Birthday", date: '2020-09-11' }, { title: "RAJ Birthday", date: '2020-09-11' }];
 
     return (
         <div >
-            <FullCalendar
+            <FullCalendar 
+            eventTextColor= "brown"
+            eventBackgroundColor= "yellow"
+            dayHeaderClassNames= "fc-day-header"
+            dayCellClassNames= "fc-day-number"
+            headerToolbar = "hidden"
                 defaultView="dayGridMonth"
                 plugins={[dayGridPlugin]}
                 events={events}
