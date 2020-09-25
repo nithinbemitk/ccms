@@ -17,7 +17,7 @@ const CoachingHeader = (props) => {
         }
     }
     return (
-        <div className="CoachingRow">
+        <div className="CoachingHeader">
             <h1 className="LeftSide"> Coaching Header </h1>
 
             {showHideNewPlan()}

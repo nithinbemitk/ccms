@@ -2,8 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    height: 500px;
+    overflow: scroll;
   }
   
+  .CoachingHeader {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
   .CoachingCol {
     margin: 0.5% !important;
     min-width: 240px;
