@@ -1,6 +1,6 @@
 import React from 'react';
 import Calendar from './Calendar'
-import QualityPlan from './QualityPlan'
+import QualityPlan from './qualityPlan/QualityPlan'
 import StatusList from './StatusList'
 import { useSelector } from 'react-redux'
 import './Dashboard.css'

@@ -1,0 +1,26 @@
+.QualityPlan {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 50vw;
+  overflow: scroll;
+}
+
+.Plans {
+  display: flex;
+  flex-direction: row;
+  height: 5vh;
+  font-size: 10%;
+  text-align: left;
+  margin: 10px 10px;
+}
+
+.Button {
+  display: flex;
+  flex-direction: row;
+  height: 5vh;
+  font-size: 6%;
+  font-weight: 100;
+  text-align: left;
+  margin: 10px 10px;
+}
