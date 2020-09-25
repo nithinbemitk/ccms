@@ -1,13 +1,16 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import notificatioIcon from '../../images/NotificatioIcon.png';
-import profileIcon from '../../images/profile.png';
-import {Notifications, Person} from '@material-ui/icons/';
+import { Menu, MenuItem, Button } from '@material-ui/core';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import { Notifications, Person } from '@material-ui/icons/';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { Menu, MenuItem } from '@material-ui/core';
 
 const Header = (props) => {
-    const [anchorEl, open] = React.useState(null);
+    const [anchorEl, open] = useState(null);
 
     const handleClick = event => {
         open(event.currentTarget);
@@ -15,6 +18,16 @@ const Header = (props) => {
 
     const handleClose = () => {
         open(null);
+    };
+
+    const [isOpen, setOpen] = useState(false);
+
+    const openAlert = () => {
+        setOpen(true);
+    };
+
+    const closeAlert = () => {
+        setOpen(false);
     };
 
     const navigationType = useSelector(state => {
@@ -30,6 +43,11 @@ const Header = (props) => {
             type: "SIGN_IN",
             payload: 1
         })
+    }
+
+    const showConfirmAlert = () => {
+        handleClose();
+        openAlert();
     }
 
     return (
@@ -51,12 +69,29 @@ const Header = (props) => {
                 onClose={handleClose} >
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={logoutClicked}>Logout</MenuItem>
+                <MenuItem onClick={showConfirmAlert}>Logout</MenuItem>
             </Menu>
 
+            <Dialog
+                open={isOpen}
+                onClose={closeAlert}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <DialogTitle id="alert-dialog-title">{"Logout"}</DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        Are you sure you want to logout?.
+          </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={closeAlert} color="primary">No</Button>
+                    <Button onClick={logoutClicked} color="primary" autoFocus>Yes</Button>
+                </DialogActions>
+            </Dialog>
         </div>
     );
-    
+
 }
 
 export default Header;

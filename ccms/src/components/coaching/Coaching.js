@@ -22,7 +22,7 @@ function Coaching() {
     }, []);
 
     console.log("*** log Posts - ", posts)
-    const userPosts = posts.posts.slice(0, 20).map((item) => {
+    const userPosts = posts.posts.slice(0, 50).map((item) => {
         return <Post item={item} />
     })
 

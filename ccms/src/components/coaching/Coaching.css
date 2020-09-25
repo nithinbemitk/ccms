@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    height: 500px;
+    height: 70vh;
     overflow: scroll;
   }
   
