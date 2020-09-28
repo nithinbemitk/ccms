@@ -40,6 +40,11 @@
     background-color: aqua;
   }
 
+  .RightSide:hover {
+    background-color: blueviolet;
+    color: cornsilk;
+  }
+
   .PlanContainer {
     display: flex;
     flex-direction: column;
