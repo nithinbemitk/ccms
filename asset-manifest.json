@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/ccms/static/css/main.594c7fe8.chunk.css",
+    "main.js": "/ccms/static/js/main.dd88a5e8.chunk.js",
+    "main.js.map": "/ccms/static/js/main.dd88a5e8.chunk.js.map",
+    "runtime-main.js": "/ccms/static/js/runtime-main.be6c48e5.js",
+    "runtime-main.js.map": "/ccms/static/js/runtime-main.be6c48e5.js.map",
+    "static/css/2.aa9c7ed0.chunk.css": "/ccms/static/css/2.aa9c7ed0.chunk.css",
+    "static/js/2.6dad08ee.chunk.js": "/ccms/static/js/2.6dad08ee.chunk.js",
+    "static/js/2.6dad08ee.chunk.js.map": "/ccms/static/js/2.6dad08ee.chunk.js.map",
+    "index.html": "/ccms/index.html",
+    "precache-manifest.3495b9ba6d1cefae6866eca8d7731992.js": "/ccms/precache-manifest.3495b9ba6d1cefae6866eca8d7731992.js",
+    "service-worker.js": "/ccms/service-worker.js",
+    "static/css/2.aa9c7ed0.chunk.css.map": "/ccms/static/css/2.aa9c7ed0.chunk.css.map",
+    "static/css/main.594c7fe8.chunk.css.map": "/ccms/static/css/main.594c7fe8.chunk.css.map",
+    "static/js/2.6dad08ee.chunk.js.LICENSE.txt": "/ccms/static/js/2.6dad08ee.chunk.js.LICENSE.txt",
+    "static/media/LoginBackground.png": "/ccms/static/media/LoginBackground.23d31093.png",
+    "static/media/MicrosoftIcon.png": "/ccms/static/media/MicrosoftIcon.bfacef72.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.be6c48e5.js",
+    "static/css/2.aa9c7ed0.chunk.css",
+    "static/js/2.6dad08ee.chunk.js",
+    "static/css/main.594c7fe8.chunk.css",
+    "static/js/main.dd88a5e8.chunk.js"
+  ]
+}
